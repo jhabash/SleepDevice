@@ -3,7 +3,7 @@
 
 float z = 0.868*1000;
 bool pflag = false;
-float total_program_duration = 120000;
+float total_program_duration = 420000;
 float curveZero = 0;
 float brightness = 0;
 float brightness_previous = 0;
@@ -50,6 +50,7 @@ bool ModifyLedBrightness() {
        
     if (total_program_duration <= millis()) { //if the program has reached the full amount of time, the endProgram flag is set to true
           endProgram = true;
+          Serial.print(millis());
     }
 
     Serial.println(millis()-curveZero); //duration of cycle (debugging purposes)
