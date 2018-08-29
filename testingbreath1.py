@@ -14,9 +14,9 @@ x = 0
 test1 = 0
 
 while True:
-	x = round(1000*(time.time()-start), 0)
+	x = round(1000*(time.time()-start), 0) #
 	y_old = y
-	y = (math.exp(math.sin(((x-test1)-z*(math.pi/2))/z))-(1/math.e))*(255/(math.e-(1/math.e)))
+	y = (math.exp(math.sin(((x-test1)-z*(math.pi/2))/z))-(1/math.e))*(255/(math.e-(1/math.e))) #
 	if y<y_old and pflag == False:
 		pflag = True
 		y_old = 255
