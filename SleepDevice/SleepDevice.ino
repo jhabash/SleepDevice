@@ -13,10 +13,14 @@ bool runProgram = true;
 void setup() {
   // initialize digital pin LED_BUILTIN as an output.
   runProgram = true;
+  total_program_duration = round(((analogRead(2)/1023.0)*(1800000.0-420000))+420000);
   pinMode(LED_BUILTIN, OUTPUT);
   pinMode(9, OUTPUT);
   Serial.begin(9600);
-  
+  Serial.println(total_program_duration);
+
+
+  //((analogRead(2)/1023)*(1800000-420000))+420000
 }
 
 // the loop function runs over and over again forever
